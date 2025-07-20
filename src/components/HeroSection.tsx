@@ -5,7 +5,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -63,7 +63,7 @@ export function HeroSection() {
         <PropertySearch />
         
         {/* Trust Indicators */}
-        <div className="flex flex-wrap justify-center items-center gap-8 mt-12 opacity-80">
+        <div className="flex flex-wrap justify-center items-center gap-2 md:gap-8 mt-12 mb-12 md:mb-0 opacity-80">
           <div className="flex items-center text-background/70">
             <Users className="w-5 h-5 mr-2" />
             <span className="text-sm">Mais de 10.000 clientes atendidos</span>

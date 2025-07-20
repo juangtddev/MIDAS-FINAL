@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
-import { Search, MapPin, Home, DollarSign } from "lucide-react";
+import { Search, MapPin, Home, DollarSign, Bed } from "lucide-react";
 
 export function PropertySearch() {
   return (
     <Card className="w-full max-w-4xl mx-auto p-6 bg-card/95 backdrop-blur-md shadow-strong border-0 animate-fade-in-up">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-muted-foreground">Localização</label>
+        <div className="space-y-2 text-left">
+          <label className=" text-sm font-medium text-muted-foreground ">Localização</label>
           <div className="relative">
             <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
             <Input 
@@ -19,8 +19,8 @@ export function PropertySearch() {
           </div>
         </div>
         
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-muted-foreground">Tipo</label>
+        <div className="space-y-2 text-left">
+          <label className="text-sm font-medium text-muted-foreground ">Tipo</label>
           <Select>
             <SelectTrigger className="bg-background/50 border-border/50 focus:bg-background">
               <Home className="w-4 h-4 mr-2 text-muted-foreground" />
@@ -36,8 +36,8 @@ export function PropertySearch() {
           </Select>
         </div>
         
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-muted-foreground">Preço</label>
+        <div className="space-y-2 text-left">
+          <label className=" text-sm font-medium text-muted-foreground">Preço</label>
           <Select>
             <SelectTrigger className="bg-background/50 border-border/50 focus:bg-background">
               <DollarSign className="w-4 h-4 mr-2 text-muted-foreground" />
@@ -53,11 +53,14 @@ export function PropertySearch() {
           </Select>
         </div>
         
-        <div className="space-y-2">
+        <div className="space-y-2 text-left">
           <label className="text-sm font-medium text-muted-foreground">Quartos</label>
           <Select>
             <SelectTrigger className="bg-background/50 border-border/50 focus:bg-background">
+              
+              <Bed className="w-4 h-4 mr-2 text-muted-foreground" />
               <SelectValue placeholder="Nº quartos" />
+              
             </SelectTrigger>
             <SelectContent className="bg-popover border-border/50">
               <SelectItem value="1">1 quarto</SelectItem>
@@ -74,7 +77,7 @@ export function PropertySearch() {
           <Search className="w-5 h-5 mr-2" />
           Buscar Imóveis
         </Button>
-        <Button variant="outline" size="lg">
+        <Button variant="outline" size="lg" className="w-32 md:w-64">
           Filtros Avançados
         </Button>
       </div>
